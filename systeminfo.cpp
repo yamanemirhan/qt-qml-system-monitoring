@@ -31,6 +31,7 @@ void SystemInfo::updateSystemInfo() {
     updateCpuUsage();
     updateRamUsage();
     updateDiskUsage();
+    updateUptime();
 }
 
 void SystemInfo::updateCpuUsage(){
@@ -101,24 +102,23 @@ void SystemInfo::updateDiskUsage(){
 }
 
 void SystemInfo::updateUptime() {
-    QFile file("/proc/uptime");
-    if(file.open(QIODevice::ReadOnly | QIODevice::Text)){
-        QTextStream in(&file);
-        QString line = in.readLine();
-        QStringList uptimeData = line.split(" ");
-        if(!uptimeData.isEmpty()){
-            bool ok;
-            double uptimeSeconds = uptimeData[0].toDouble(&ok);
-            if(ok) {
-                int days = static_cast<int>(uptimeSeconds / 86400);
-                int hours = static_cast<int>((uptimeSeconds - (days * 86400)) / 3600);
-                int minutes = static_cast<int>((uptimeSeconds - (days * 86400) - (hours * 3600)) / 60);
-                int seconds = static_cast<int>(uptimeSeconds) % 60;
+    std::ifstream file("/proc/uptime");
+    std::string line;
 
-                m_uptime = QString("%1 days, %2 hours, %3 minutes, %4 seconds").arg(days).arg(hours).arg(minutes).arg(seconds);
-                emit uptimeChanged();
-            }
+        if(std::getline(file, line)){
+            std::istringstream iss(line);
+            double uptimeSeconds;
+            iss >> uptimeSeconds;
+
+            int hours = static_cast<int>(uptimeSeconds) / 3600;
+            int minutes = (static_cast<int>(uptimeSeconds) % 3600) / 60;
+            int seconds = static_cast<int>(uptimeSeconds) % 60;
+
+            m_uptime = QString("%1:%2:%3")
+                           .arg(hours, 2, 10, QLatin1Char('0'))
+                           .arg(minutes, 2, 10, QLatin1Char('0'))
+                           .arg(seconds, 2, 10, QLatin1Char('0'));
+
+            emit uptimeChanged();
         }
-        file.close();
-    }
 }

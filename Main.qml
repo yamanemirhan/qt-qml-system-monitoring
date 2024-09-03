@@ -9,6 +9,21 @@ ApplicationWindow {
 
     font.pixelSize: 16
 
+
+    Item {
+        anchors.fill: parent
+
+        Text {
+            id: uptimeText
+            text: "Uptime: " + systemInfo.uptime
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.margins: 10
+            font.pixelSize: 16
+            color: "black"
+        }
+    }
+
     GridLayout {
         columns: 3
         anchors.fill: parent
