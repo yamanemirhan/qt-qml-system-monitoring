@@ -1,1 +1,0 @@
-/home/emirhan/si-testing/build/Desktop_Qt_6_7_2-Debug/appsi-testing_autogen/include/../EWIEGA46WW/moc_systeminfo.cpp.json

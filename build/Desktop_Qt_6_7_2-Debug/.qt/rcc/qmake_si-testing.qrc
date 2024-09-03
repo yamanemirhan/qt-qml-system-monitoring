@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/qt/qml/si-testing">
-    <file alias="qmldir">/home/emirhan/si-testing/build/Desktop_Qt_6_7_2-Debug/si-testing/qmldir</file>
-  </qresource>
-</RCC>
-
