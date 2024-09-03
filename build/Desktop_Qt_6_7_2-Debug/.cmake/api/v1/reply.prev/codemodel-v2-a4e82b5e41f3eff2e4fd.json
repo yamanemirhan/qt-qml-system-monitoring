@@ -1,0 +1,169 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-135a6835bfe6b0a0581a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "si-testing",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-aae5e2000cba24ec0470.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-324631e1c61d1eb188bb.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-61fcb8067c099ada4d66.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-5248f76f99d9b8932592.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsi-testing::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsi-testing-Debug-40c25b1b5cb7cf171d3e.json",
+					"name" : "appsi-testing",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsi-testing_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsi-testing_autogen-Debug-b350258f456940e25f4b.json",
+					"name" : "appsi-testing_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsi-testing_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsi-testing_autogen_timestamp_deps-Debug-489aa432f7c5246bcdd3.json",
+					"name" : "appsi-testing_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsi-testing_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsi-testing_qmlimportscan-Debug-99192ee1b6cd30677d4e.json",
+					"name" : "appsi-testing_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsi-testing_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsi-testing_qmllint-Debug-86497e6cc9f1e151ed81.json",
+					"name" : "appsi-testing_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsi-testing_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsi-testing_qmllint_json-Debug-bbf6caefb6d5424286d6.json",
+					"name" : "appsi-testing_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsi-testing_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsi-testing_qmllint_module-Debug-e02436bacdddade4fd45.json",
+					"name" : "appsi-testing_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsi-testing_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsi-testing_qmltyperegistration-Debug-18ff25f9db1b5d6838fe.json",
+					"name" : "appsi-testing_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsi-testing_tooling::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsi-testing_tooling-Debug-2fe1ed5e2e8ef4506054.json",
+					"name" : "appsi-testing_tooling",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/emirhan/si-testing/build/Desktop_Qt_6_7_2-Debug",
+		"source" : "/home/emirhan/si-testing"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

@@ -1,0 +1,10 @@
+-I
+/home/emirhan/si-testing/build/Desktop_Qt_6_7_2-Debug
+-I
+/home/emirhan/Qt/6.7.2/gcc_64/./qml
+--resource
+/home/emirhan/si-testing/build/Desktop_Qt_6_7_2-Debug/.qt/rcc/qmake_si-testing.qrc
+--resource
+/home/emirhan/si-testing/build/Desktop_Qt_6_7_2-Debug/.qt/rcc/appsi-testing_raw_qml_0.qrc
+--module
+si-testing
