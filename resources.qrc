@@ -3,5 +3,6 @@
         <file>cpu_icon.png</file>
         <file>disk_icon.png</file>
         <file>ram_icon.png</file>
+        <file>network_icon.png</file>
     </qresource>
 </RCC>

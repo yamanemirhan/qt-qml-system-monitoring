@@ -22,6 +22,7 @@ qt_add_qml_module(appsi-testing
         RESOURCES cpu_icon.png
         RESOURCES disk_icon.png
         RESOURCES ram_icon.png
+        RESOURCES network_icon.png
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

@@ -26,12 +26,16 @@ double SystemInfo::diskUsage() const {
 QString SystemInfo::uptime() const {
     return m_uptime;
 }
+double SystemInfo::networkUsage() const {
+    return m_networkUsage;
+}
 
 void SystemInfo::updateSystemInfo() {
     updateCpuUsage();
     updateRamUsage();
     updateDiskUsage();
     updateUptime();
+    updateNetworkUsage();
 }
 
 void SystemInfo::updateCpuUsage(){
@@ -121,4 +125,29 @@ void SystemInfo::updateUptime() {
 
             emit uptimeChanged();
         }
+}
+
+void SystemInfo::updateNetworkUsage() {
+    std::ifstream file("/proc/net/dev");
+    std::string line;
+    long receivedBytes = 0;
+    long transmittedBytes = 0;
+
+    while(std::getline(file, line)){
+        std::istringstream iss(line);
+        std::string interfaceName;
+        long rBytes, tBytes;
+
+        if(line.find(":") != std::string::npos){
+            iss >> interfaceName;
+            iss >> rBytes;
+            iss >> tBytes;
+            receivedBytes += rBytes;
+            transmittedBytes += tBytes;
+        }
+
+    }
+
+    m_networkUsage = (receivedBytes + transmittedBytes) / 1024.0;
+    emit networkUsageChanged();
 }

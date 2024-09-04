@@ -25,7 +25,7 @@ ApplicationWindow {
     }
 
     GridLayout {
-        columns: 3
+        columns: 4
         anchors.fill: parent
         rowSpacing: 20
         columnSpacing: 20
@@ -135,6 +135,43 @@ ApplicationWindow {
 
             Text {
                 text: systemInfo.diskUsage.toFixed(2) + "%"
+                font.pixelSize: 14
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+        }
+
+        ColumnLayout {
+            Layout.alignment: Qt.AlignCenter
+            spacing: 10
+
+            Rectangle {
+                width: 60
+                height: 60
+
+                Image {
+                    source: "network_icon.png"
+                    anchors.fill: parent
+                    fillMode: Image.PreserveAspectFit
+                }
+            }
+
+            Text {
+                text: "NETWORK Usage"
+                font.bold: true
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            ProgressBar {
+                value: systemInfo.networkUsage / (1024*1024)
+                width: 100
+                height: 10
+                from: 0
+                to: 1
+            }
+
+            Text {
+                text: systemInfo.networkUsage.toFixed(2) + " KB"
                 font.pixelSize: 14
                 horizontalAlignment: Text.AlignHCenter
             }
